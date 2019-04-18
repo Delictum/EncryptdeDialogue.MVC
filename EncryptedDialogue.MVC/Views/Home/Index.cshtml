@@ -1,0 +1,95 @@
+﻿@using Microsoft.AspNet.Identity
+@model EncryptedDialogue.MVC.Models.DialoguesVewModel
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<h1 align="center">Диалоги</h1>
+
+<div><span id="notification" style="color:red;font-size:15px;"></span></div>
+
+@foreach (var user in Model.ApplicationUsers)
+{
+    <div class="jumbotron" onclick="location.href='../Home/Dialogue/Dialogue?recepientId=@user.Id';">
+        <div class="row">
+            <div class="col-md-4">
+                <h3>
+                    @user.UserName
+                </h3>
+            </div>
+
+            <div class="col-md-6">
+                <p>
+                    @if (Model.Dialogues.FirstOrDefault(x => x.RecipientId == User.Identity.GetUserId() && x.SenderId == user.Id) != null)
+                    {
+                        if (!string.IsNullOrEmpty(Model.Dialogues.FirstOrDefault(x => x.RecipientId == User.Identity.GetUserId() && x.SenderId == user.Id).MessageText))
+                        {
+                            <h4>@Model.Dialogues.FirstOrDefault(x => x.RecipientId == User.Identity.GetUserId() && x.SenderId == user.Id).MessageText</h4>
+                        }
+                        else if (Model.Dialogues.FirstOrDefault(x => x.RecipientId == User.Identity.GetUserId() && x.SenderId == user.Id).FileDataId != 0)
+                        {
+                            <h4>Вложение</h4>
+                        }
+                        else
+                        {
+                            <h4>Нет сообщений</h4>
+                        }
+                    }
+                    else if (Model.Dialogues.FirstOrDefault(x => x.RecipientId == user.Id && x.SenderId == User.Identity.GetUserId()) != null)
+                    {
+                        if (!string.IsNullOrEmpty(Model.Dialogues.FirstOrDefault(x => x.RecipientId == user.Id && x.SenderId == User.Identity.GetUserId()).MessageText))
+                        {
+                            <h4>@Model.Dialogues.FirstOrDefault(x => x.RecipientId == user.Id && x.SenderId == User.Identity.GetUserId()).MessageText</h4>
+                        }
+                        else if (Model.Dialogues.FirstOrDefault(x => x.RecipientId == user.Id && x.SenderId == User.Identity.GetUserId()).FileDataId != 0)
+                        {
+                            <h4>Вложение</h4>
+                        }
+                        else
+                        {
+                            <h4>Нет сообщений</h4>
+                        }
+                    }
+                </p>
+            </div>
+
+            <div class="col-md-2">
+                @if (Model.Dialogues.FirstOrDefault(x => x.RecipientId == User.Identity.GetUserId() && x.SenderId == user.Id) != null)
+                {
+                    if (Model.Dialogues.FirstOrDefault(x => x.RecipientId == User.Identity.GetUserId() && x.SenderId == user.Id) != null)
+                    {
+                        <h4>@Model.Dialogues.FirstOrDefault(x => x.RecipientId == User.Identity.GetUserId() && x.SenderId == user.Id).DateTime</h4>
+                    }
+                }
+                else if (Model.Dialogues.FirstOrDefault(x => x.RecipientId == user.Id && x.SenderId == User.Identity.GetUserId()) != null)
+                {
+                    if (Model.Dialogues.FirstOrDefault(x => x.RecipientId == user.Id && x.SenderId == User.Identity.GetUserId()) != null)
+                    {
+                        <h4>@Model.Dialogues.FirstOrDefault(x => x.RecipientId == user.Id && x.SenderId == User.Identity.GetUserId()).DateTime</h4>
+                    }
+                }
+            </div>
+        </div>
+    </div>
+}
+
+@section scripts{
+    <script src="~/Scripts/jquery.signalR-2.4.1.min.js"></script>
+    <!--Ссылка на автоматически сгенерированный скрипт хаба SignalR -->
+    <script src="~/signalr/hubs"></script>
+    <script type="text/javascript">
+        $(function () {
+ 
+            var notificationhub = $.connection.notificationHub;
+ 
+            notificationhub.client.displayMessage = function (message) {
+ 
+                $('#notification').html(message);
+            };
+ 
+            $.connection.hub.start();
+ 
+        });
+    </script>
+}

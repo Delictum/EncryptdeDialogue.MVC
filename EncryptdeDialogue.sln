@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.168
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EncryptedDialogue.EF", "EncryptedDialogue\EncryptedDialogue.EF.csproj", "{0E0816D9-0D7C-4A0A-8302-6780E4F982A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EncryptedDialogue.DAL", "EncryptedDialogue.DAL\EncryptedDialogue.DAL.csproj", "{89E5BB73-C6CB-4702-9D66-0CDA0DA8ECC3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EncryptedDialogue.BL", "EncryptedDialogue.BL\EncryptedDialogue.BL.csproj", "{AD97DB98-2B8F-4B80-95EB-9C381FAF5689}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EncryptedDialogue.WindowsForms", "EncryptedDialogue.WindowsForms\EncryptedDialogue.WindowsForms.csproj", "{17DAAD5E-F539-4919-9CFC-405FE27F0B95}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EncryptedDialogue.Console", "EncryptedDialogue.Console\EncryptedDialogue.Console.csproj", "{5C0AD425-FCD6-448B-BA32-5A8214C12CB3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EncryptedDialogue.MVC", "EncryptedDialogue.MVC\EncryptedDialogue.MVC.csproj", "{8867349F-3109-4669-A4CB-8CAF2DF1109C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0E0816D9-0D7C-4A0A-8302-6780E4F982A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E0816D9-0D7C-4A0A-8302-6780E4F982A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E0816D9-0D7C-4A0A-8302-6780E4F982A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E0816D9-0D7C-4A0A-8302-6780E4F982A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89E5BB73-C6CB-4702-9D66-0CDA0DA8ECC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89E5BB73-C6CB-4702-9D66-0CDA0DA8ECC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89E5BB73-C6CB-4702-9D66-0CDA0DA8ECC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89E5BB73-C6CB-4702-9D66-0CDA0DA8ECC3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD97DB98-2B8F-4B80-95EB-9C381FAF5689}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD97DB98-2B8F-4B80-95EB-9C381FAF5689}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD97DB98-2B8F-4B80-95EB-9C381FAF5689}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD97DB98-2B8F-4B80-95EB-9C381FAF5689}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17DAAD5E-F539-4919-9CFC-405FE27F0B95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17DAAD5E-F539-4919-9CFC-405FE27F0B95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17DAAD5E-F539-4919-9CFC-405FE27F0B95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17DAAD5E-F539-4919-9CFC-405FE27F0B95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C0AD425-FCD6-448B-BA32-5A8214C12CB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C0AD425-FCD6-448B-BA32-5A8214C12CB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C0AD425-FCD6-448B-BA32-5A8214C12CB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C0AD425-FCD6-448B-BA32-5A8214C12CB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8867349F-3109-4669-A4CB-8CAF2DF1109C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8867349F-3109-4669-A4CB-8CAF2DF1109C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8867349F-3109-4669-A4CB-8CAF2DF1109C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8867349F-3109-4669-A4CB-8CAF2DF1109C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {723A248B-B8F9-4246-89DB-87C2DC04215D}
+	EndGlobalSection
+EndGlobal
